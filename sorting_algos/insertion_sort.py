@@ -13,4 +13,5 @@ def insertion_sort(arr):
     return arr
 
 b = [6,5,3,1,8,7,2,4]
+print()
 print(insertion_sort(b))
