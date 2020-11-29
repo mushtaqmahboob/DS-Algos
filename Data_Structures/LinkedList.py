@@ -34,6 +34,30 @@ class Linkedlist:
         elif self.head is None:
             self.head = newnode
 
+    def delete_node(self, ele):
+
+        if self.head is None:
+            return
+        if self.head.info == ele:
+            temp = self.head
+            self.head = temp.link
+            temp = None
+            return
+        else:
+            current = self.head
+            while current.link is not None:
+
+                if current.link.info == ele:
+                    temp = current.link
+                    current.link = temp.link
+                    temp = None
+                    return
+                current = current.link
+
+
+
+
+
     def display(self):
 
         if self.head is None:
@@ -68,4 +92,17 @@ ll.display()
 print('************')
 ll.insert_at_beginning(45)
 ll.display()
+print('***********')
 
+ll.delete_node(45)
+ll.display()
+
+print('*********')
+
+ll.delete_node(24)
+ll.display()
+
+print('**********')
+
+ll.delete_node(766)
+ll.display()
